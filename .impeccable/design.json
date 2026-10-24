@@ -1,14 +1,38 @@
 {
-  "surface": "index.html",
-  "direction": "sculptural digital atelier",
-  "tokens": {
-    "body": "Manrope",
-    "background": "#131311",
-    "paper": "#eeece5",
-    "display": "Space Grotesk",
-    "breakpoint": 760,
-    "copper": "#e1a87e",
-    "secondary": "#b4b3aa"
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-24T00:00:00Z",
+  "title": "Design System: Denizard François Portfolio",
+  "extensions": {
+    "shadows": [{"name":"artwork-window","value":"0 28px 65px -20px #17251c55","purpose":"AJAX conceptual application artwork only."}],
+    "motion": [
+      {"name":"hero-arrival","value":"1s cubic-bezier(.16,1,.3,1)","purpose":"Clip reveal and 25px vertical arrival of hero copy."},
+      {"name":"link-underline","value":"transform .4s","purpose":"Underline reveal from the left."},
+      {"name":"artwork-perspective","value":"transform .8s cubic-bezier(.2,.7,.2,1)","purpose":"AJAX window straightens on hover."},
+      {"name":"reduced-motion","value":"animation:none; transition:none; scroll-behavior:auto","purpose":"Reduced motion disables CSS animation and transitions; canvas starts paused."},
+      {"name":"canvas-lifecycle","value":"requestAnimationFrame","purpose":"Pause control, offscreen intersection and page visibility stop the canvas loop; reduced-motion changes update pause state."}
+    ],
+    "breakpoints": [
+      {"name":"mobile","value":"max-width:760px"},
+      {"name":"wide","value":"min-width:1600px"},
+      {"name":"canvas-mobile","value":"width < 760px"}
+    ]
   },
-  "mode": "experience"
+  "components": [
+    {"name":"Primary action","kind":"button","refersTo":"button-primary","description":"Compact contact action on the copper surface.","html":"<a class=\"ds-action\" href=\"#\">Conversemos en Upwork ↗</a>","css":".ds-action{display:inline-block;background:var(--contact-ink,#211b15);color:var(--paper,#eeece5);font:12px 'Manrope',sans-serif;padding:16px 24px;border-radius:50px;text-decoration:none;transition:background .3s}.ds-action:hover{background:#4d3829}.ds-action:focus-visible{outline:2px solid var(--copper,#e1a87e);outline-offset:7px}"},
+    {"name":"Language selector","kind":"button","refersTo":"language-selector","description":"Outlined oval switch for Spanish and English.","html":"<button class=\"ds-language\" aria-label=\"Switch to English\">EN ↗</button>","css":".ds-language{background:transparent;border:1px solid #625c51;border-radius:50%;width:54px;height:42px;color:var(--paper,#eeece5);font:11px 'Manrope',sans-serif;cursor:pointer}.ds-language:hover{background:var(--paper,#eeece5);color:var(--bg,#131311)}.ds-language:focus-visible{outline:2px solid var(--copper,#e1a87e);outline-offset:7px}"},
+    {"name":"Navigation","kind":"nav","description":"Text links with a left-origin underline reveal.","html":"<nav class=\"ds-nav\"><a href=\"#work\">Proyectos</a><a href=\"#about\">Enfoque</a><a href=\"#contact\">Contacto</a></nav>","css":".ds-nav{display:flex;gap:38px;color:var(--paper,#eeece5);font:13px 'Manrope',sans-serif}.ds-nav a{color:inherit;text-decoration:none;position:relative}.ds-nav a:after{content:'';position:absolute;height:1px;background:currentColor;bottom:-5px;left:0;width:100%;transform:scaleX(0);transform-origin:left;transition:transform .4s}.ds-nav a:hover:after{transform:scaleX(1)}.ds-nav a:focus-visible{outline:2px solid var(--copper,#e1a87e);outline-offset:7px}"},
+    {"name":"Project tags","kind":"custom","description":"Plain inline metadata without filled chips.","html":"<div class=\"ds-tags\"><span>React</span><span>Spring Boot</span><span>REST APIs</span></div>","css":".ds-tags{display:flex;gap:18px;flex-wrap:wrap;color:#4c4d43;font:11px 'Manrope',sans-serif}"},
+    {"name":"Service disclosure","kind":"custom","description":"Native open layout with divider and copper plus/minus.","html":"<details class=\"ds-service\"><summary>Interfaces & experiencias</summary><p>Interfaces adaptables y conexiones con APIs.</p></details>","css":".ds-service{border-top:1px solid var(--line,#3c3b35);border-bottom:1px solid var(--line,#3c3b35);padding:18px 0;color:var(--paper,#eeece5);font:14px 'Manrope',sans-serif}.ds-service summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:15px}.ds-service summary::-webkit-details-marker{display:none}.ds-service summary:after{content:'+';color:var(--copper,#e1a87e);font-size:20px;line-height:1.2}.ds-service[open] summary:after{content:'−'}.ds-service p{color:var(--muted,#b4b3aa);font-size:13px;padding-top:15px;margin:0}.ds-service summary:focus-visible{outline:2px solid var(--copper,#e1a87e);outline-offset:7px}"}
+  ],
+  "narrative": {
+    "northStar": "The Sculptural Digital Atelier",
+    "overview": "Warm charcoal frames a living copper mathematical knot. Large, closely tracked typography and generous editorial spacing connect expressive interface work with engineering precision. Native text, links and disclosure controls remain the functional foundation around the decorative canvas.\n\nThe system supports Spanish and English without changing its visual identity. Work presentations have distinct material palettes, while the surrounding portfolio retains a quiet charcoal, paper and copper rhythm.",
+    "keyCharacteristics": ["Sculptural copper geometry on warm charcoal.","Large geometric display type paired with restrained humanist body text.","Full-width project artwork, open information rows and thin dividers.","Motion that can be paused and respects reduced motion."],
+    "rules": [
+      {"name":"The Material Context Rule","body":"Project artwork may use its own green, sage or terracotta presentation palette; those artwork colors do not replace the portfolio's shared interface tokens.","section":"colors"},
+      {"name":"The Legible Metadata Rule","body":"Preserve the final shared label sizing overrides; earlier compact artwork and mobile declarations are not the final rendered values.","section":"typography"}
+    ],
+    "dos": ["Do keep the charcoal, paper and copper identity around project-specific artwork.","Do retain native HTML content and controls around the decorative canvas.","Do preserve the visible pause control and reduced-motion behavior.","Do verify both language versions at the mobile breakpoint.","Do retain the final legibility overrides for metadata."],
+    "donts": ["Don't spread the artwork window shadow to ordinary content rows.","Don't replace open project presentations with generic rounded cards.","Don't gate content behind a loading animation.","Don't imply conceptual artwork is a product screenshot."]
+  }
 }
