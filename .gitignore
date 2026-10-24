@@ -1,3 +1,6 @@
 .impeccable/review/
 .impeccable/check.cjs
 
+.impeccable/hero-check.cjs
+.impeccable/photo-detector.json
+.impeccable/hero-detector.json

@@ -7,3 +7,14 @@
 /* Personal portrait supplied by Denizard François. */
 .about-title{justify-content:flex-start;gap:38px}.portrait{margin:0;width:100%;max-width:430px}.portrait img{display:block;width:100%;height:auto;aspect-ratio:4/4.1;object-fit:cover;object-position:50% 38%;border-radius:12px}.portrait figcaption{display:flex;justify-content:space-between;gap:15px;font-size:11px;padding-top:14px;color:var(--paper)}.portrait figcaption span{color:var(--muted)}@media(max-width:760px){.about-title{flex-direction:column;align-items:stretch;gap:28px}.portrait{max-width:none}.portrait img{aspect-ratio:4/4;object-position:50% 35%}.portrait figcaption{font-size:11px}}
 
+
+/* Layered portrait composition: photo behind the live sculpture. */
+.hero-portrait{position:absolute;z-index:-2;right:3%;bottom:0;width:48%;height:90%;pointer-events:none;mask-image:linear-gradient(to bottom,#000 65%,transparent 100%)}.hero-portrait img{width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:saturate(.65) brightness(.78)}#sculpture{z-index:-1;pointer-events:none}.hero-copy{z-index:2;bottom:140px;right:42%}.hero-copy h1{font-size:clamp(52px,5.1vw,80px)}.hero-bottom{flex-direction:column;align-items:flex-start;gap:28px}.hero-bottom p{max-width:360px}.hero-foot,.hero-top{z-index:3}.about-title{justify-content:space-between}.hero-portrait:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg),transparent 30%)}@media(max-width:760px){.hero{min-height:850px}.hero-portrait{width:90%;height:61%;right:-11%;bottom:0;mask-image:linear-gradient(to bottom,#000 64%,transparent 100%)}.hero-portrait img{object-position:center bottom}.hero-copy{top:78px;bottom:auto;right:5.5%;}.hero-copy h1{font-size:clamp(40px,9.5vw,62px);max-width:560px}.hero-bottom{margin-top:22px;gap:18px}.hero-bottom p{max-width:290px;font-size:13px}.hero-bottom .round-link{gap:12px}.hero-bottom .round-link svg{height:36px;width:36px;padding:9px}.hero-foot{bottom:22px}.about-title{flex-direction:row;align-items:flex-end}.hero-portrait:after{background:linear-gradient(90deg,var(--bg),transparent 25%)}}
+
+
+.hero-portrait img{transform:scale(1.52);transform-origin:center bottom;filter:saturate(.7) brightness(.9)}@media(max-width:760px){.hero-portrait{right:-7%;width:94%;height:58%}.hero-portrait img{transform:scale(1.55)}}
+
+
+/* Let the sculpture cross the shoulders while keeping the face clear. */
+#sculpture{mask-image:radial-gradient(ellipse 170px 210px at 75% 53%,transparent 48%,#000 100%)}@media(max-width:760px){#sculpture{mask-image:radial-gradient(ellipse 94px 135px at 65% 73%,transparent 45%,#000 100%)}}
+

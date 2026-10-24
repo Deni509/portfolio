@@ -147,3 +147,7 @@ The hero copy arrives with a clipped reveal and vertical movement over (1s), usi
 - **Don't** replace open project presentations with generic rounded cards.
 - **Don't** gate content behind a loading animation.
 - **Don't** imply conceptual artwork is a product screenshot.
+
+## Portrait hero update
+The owner portrait now occupies the lower right of the hero with transparent background, a charcoal tonal treatment and bottom fade. The live copper sculpture sits above the portrait (z-index -1 versus -2) while heading and controls sit in front at z-index 2/3. Desktop copy occupies the left area; mobile places copy first and portrait beneath. The old about-section portrait card is removed. Original supplied photo is retained separately.
+
