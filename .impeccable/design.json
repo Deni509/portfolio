@@ -1,0 +1,14 @@
+{
+  "surface": "index.html",
+  "direction": "sculptural digital atelier",
+  "tokens": {
+    "body": "Manrope",
+    "background": "#131311",
+    "paper": "#eeece5",
+    "display": "Space Grotesk",
+    "breakpoint": 760,
+    "copper": "#e1a87e",
+    "secondary": "#b4b3aa"
+  },
+  "mode": "experience"
+}
