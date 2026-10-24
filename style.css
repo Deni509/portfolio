@@ -3,3 +3,7 @@
 
 /* Legibility at all viewport sizes. */
 #language,.hero-top,.hero-foot,.hero-foot button,.category,.tags,.art-note,.project-note,.window-top>span,.app-content small,.app-flow,.institution-footer,.type-art>div,.contact-top,footer{font-size:11px}.app-flow b{color:#4b6654}.app-body aside i{border-color:#546951}@media(max-width:760px){#language{font-size:11px}.hero-top span:last-child{max-width:145px}.hero-foot{gap:10px}.hero-foot>span{max-width:175px}.app-flow{flex-wrap:wrap;gap:5px}.app-flow span{padding:5px}.app-content{padding:18px 12px}.art-note{font-size:11px}.app-content small{font-size:10px}.institution-name>span{font-size:11px}footer{font-size:11px}}
+
+/* Personal portrait supplied by Denizard François. */
+.about-title{justify-content:flex-start;gap:38px}.portrait{margin:0;width:100%;max-width:430px}.portrait img{display:block;width:100%;height:auto;aspect-ratio:4/4.1;object-fit:cover;object-position:50% 38%;border-radius:12px}.portrait figcaption{display:flex;justify-content:space-between;gap:15px;font-size:11px;padding-top:14px;color:var(--paper)}.portrait figcaption span{color:var(--muted)}@media(max-width:760px){.about-title{flex-direction:column;align-items:stretch;gap:28px}.portrait{max-width:none}.portrait img{aspect-ratio:4/4;object-position:50% 35%}.portrait figcaption{font-size:11px}}
+
